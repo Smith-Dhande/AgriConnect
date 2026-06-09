@@ -175,17 +175,15 @@ body{
     padding:15px 25px;
     border:none;
     border-radius:var(--radius);
-    background-color:var(--primary);
-    color:white;
+    color: var(--secondary);
     font-size:15px;
+    background-color: var(--neutral);
     font-weight:600;
     cursor:pointer;
     transition:var(--transition);
 }
 
-.primaryBtn:hover{
-    background-color:var(--secondary);
-}
+
 
 .secondaryBtn{
     padding:15px 25px;
@@ -493,7 +491,7 @@ body{
 
 /* Crops section css */
 .cropsMarketplace{
-    padding:100px 80px;
+    padding:100px 160px;
     padding-top: 0px;
 }
 
@@ -502,7 +500,7 @@ body{
     justify-content:space-between;
     align-items:center;
     margin-bottom:50px;
-    padding: 0px 80px ;
+    padding: 0px 140px ;
 }
 
 .left h2{
@@ -530,7 +528,7 @@ body{
 
 .cropcard{
     background-color:white;
-    border-radius:25px;
+    border-radius:25px;   
     overflow:hidden;
     box-shadow:0 10px 25px rgba(0,0,0,0.08);
     transition:var(--transition);
@@ -546,7 +544,7 @@ body{
 
 .cropImage img{
     width:100%;
-    height:250px;
+    height:200px;
     object-fit:cover;
     display:block;
 }
@@ -1003,7 +1001,7 @@ font-size:13px;
 /* footer section */
 
 .footer{
-    padding:80px;
+    padding:40px 100px;
     background-color:white;
     border-top:1px solid var(--border);
 }
