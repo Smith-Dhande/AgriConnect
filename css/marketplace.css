@@ -615,9 +615,10 @@ body{
 
 
 
-/* footer css */
+/* footer section */
+
 .footer{
-    padding:40px 100px;
+    padding:20px 160px;
     background-color:white;
     border-top:1px solid var(--border);
 }
@@ -676,4 +677,5 @@ body{
 
 .footerBottom p{
     color:var(--text-light);
+    font-size: small;
 }

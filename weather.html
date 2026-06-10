@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Insights</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/weather.css">
+</head>
+<body>
+    <div class="parent">
+        <!-- Navigation bar -->
+        <div class="nav">
+            <div class="navleft">
+                <div class="logo">
+                    <img src="images/logo.png" alt="logo">
+                </div>
+                <div class="navlinks">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="marketplace.html">Marketplace</a></li>
+                        <li><a href="#">Market Rates</a></li>
+                        <li><a href="weather.html">Weather</a></li>
+                        <li><a href="#">Fertiliser Advisor</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navright">
+                <a href="#">Login</a>
+                <button>Sell Your Crops</button>
+            </div>
+        </div>
+
+        <!-- weather insights and search bar strip -->
+        <div class="weatherSearchSection">
+            <h3>Weather Insights</h3>
+
+            <div class="weatherSearch">
+                <i class="fa-solid fa-location-dot"></i>
+                <input type="search" name="searchCity" id="searchCity" placeholder="Search city or village...">
+                <span class="currentLocation" id="cityName"></span>
+                <button id="searchBtn">Search</button>
+            </div>
+        </div>
+        <!-- main ssection  -->
+         <section class="weatherDashboard">
+
+            <!-- Row 1 -->
+            <div class="topSection">
+
+                <div class="currentWeather">
+                    <div class="weatherLeft">
+                        <i class="fa-solid fa-cloud-sun"></i>
+
+                        <div>
+                            <h1 id="temperature">28°C</h1>
+                            <h3 id="condition">Partly Cloudy</h3>
+                            <p id="feelsLike">Feels Like: 31°C</p>
+                        </div>
+                    </div>
+
+                    <div class="weatherStats">
+                        <div>
+                            <span>Humidity</span>
+                            <h3 id="humidity">64%</h3>
+                        </div>
+
+                        <div>
+                            <span>Wind Speed</span>
+                            <h3 id="windSpeed">12 km/h</h3>
+                        </div>
+
+                        <div>
+                            <span>Rain Prob.</span>
+                            <h3>15%</h3>
+                        </div>
+
+                        <div>
+                            <span>UV Index</span>
+                            <h3>Low</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alertCard">
+                    <h2>Safety Alerts</h2>
+
+                    <div class="alertBox">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+
+                        <div>
+                            <h4>Heavy Rain Warning</h4>
+                            <p>
+                                Severity: Moderate. Expect rainfall
+                                starting Wednesday.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Row 2 -->
+
+            <div class="middleSection">
+
+                <div class="forecastSection">
+
+                    <h2>5-Day Forecast</h2>
+
+                    <div class="forecastCards">
+
+                        <div class="forecastCard active">
+                            <h4>Mon</h4>
+                            <i class="fa-regular fa-sun"></i>
+                            <p>32° / 24°</p>
+                        </div>
+
+                        <div class="forecastCard">
+                            <h4>Tue</h4>
+                            <i class="fa-solid fa-cloud-sun"></i>
+                            <p>30° / 22°</p>
+                        </div>
+
+                        <div class="forecastCard">
+                            <h4>Wed</h4>
+                            <i class="fa-solid fa-cloud-rain"></i>
+                            <p>26° / 20°</p>
+                        </div>
+
+                        <div class="forecastCard">
+                            <h4>Thu</h4>
+                            <i class="fa-solid fa-cloud"></i>
+                            <p>28° / 21°</p>
+                        </div>
+
+                        <div class="forecastCard">
+                            <h4>Fri</h4>
+                            <i class="fa-regular fa-sun"></i>
+                            <p>31° / 23°</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="cropImpact">
+
+                    <h2>Crop Impact Status</h2>
+
+                    <div class="cropCard">
+                        <div>
+                            <h4>🌾 Wheat</h4>
+                            <p>Good Growing Conditions</p>
+                        </div>
+
+                        <span class="good">Optimal</span>
+                    </div>
+
+                    <div class="cropCard">
+                        <div>
+                            <h4>🌿 Rice</h4>
+                            <p>Monitor Moisture Levels</p>
+                        </div>
+
+                        <span class="warning">Monitor</span>
+                    </div>
+
+                    <div class="cropCard">
+                        <div>
+                            <h4>🌱 Cotton</h4>
+                            <p>Rainfall Risk Expected</p>
+                        </div>
+
+                        <span class="danger">Warning</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Row 3 -->
+
+            <div class="recommendations">
+
+                <h2>Farming Recommendations</h2>
+
+                <div class="recommendationGrid">
+
+                    <div class="recommendationCard">
+                        <h4>Irrigation Advice</h4>
+                        <p>Skip watering. High soil moisture.</p>
+                        <a href="#">View Details →</a>
+                    </div>
+
+                    <div class="recommendationCard">
+                        <h4>Field Work</h4>
+                        <p>Optimal spray window Monday morning.</p>
+                        <a href="#">View Details →</a>
+                    </div>
+
+                    <div class="recommendationCard">
+                        <h4>Pest Risk Alert</h4>
+                        <p>Monitor for fungal blight.</p>
+                        <a href="#">View Details →</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Row 4 -->
+
+            <div class="activitySection">
+
+                <h2>Weather Impact on Farming Activities</h2>
+
+                <div class="activityGrid">
+
+                    <div class="activityCard">
+                        <span>Irrigation Status</span>
+                        <button class="green">Paused</button>
+                    </div>
+
+                    <div class="activityCard">
+                        <span>Harvesting Conditions</span>
+                        <button class="orange">Fair</button>
+                    </div>
+
+                    <div class="activityCard">
+                        <span>Spraying Conditions</span>
+                        <button class="red">Poor</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        <!-- footer section -->
+            <footer class="footer">
+
+                <div class="footerGrid">
+
+                    <div class="footerCol">
+
+                        <div class="footerLogo">
+                            <img src="images/logo.png" alt="AgriConnect">
+                        </div>
+
+                        <p>
+                            AgriConnect helps farmers connect directly with buyers,
+                            access market insights and grow smarter.
+                        </p>
+
+                    </div>
+
+                    <div class="footerCol">
+
+                        <h3>Quick Links</h3>
+
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="marketplace.html">Marketplace</a></li>
+                            <li><a href="#">Market Rates</a></li>
+                            <li><a href="weather.html">Weather</a></li>
+                        </ul>
+
+                    </div>
+
+                    <div class="footerCol">
+
+                        <h3>Services</h3>
+
+                        <ul>
+                            <li><a href="#">Crop Marketplace</a></li>
+                            <li><a href="#">Weather Forecast</a></li>
+                            <li><a href="#">Market Insights</a></li>
+                            <li><a href="#">Fertilizer Advisor</a></li>
+                        </ul>
+
+                    </div>
+
+                    <div class="footerCol">
+
+                        <h3>Contact</h3>
+
+                        <ul>
+                            <li><i class="fa-solid fa-location-dot"></i> Amravati, Maharashtra</li>
+                            <li><i class="fa-solid fa-phone"></i> +91 9876543210</li>
+                            <li><i class="fa-solid fa-envelope"></i> support@agriconnect.com</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                <div class="footerBottom">
+                    <p>© 2026 AgriConnect. All Rights Reserved.</p>
+                </div>
+
+            </footer>
+        
+    </div>
+    <script src="js/weather.js"></script>
+</body>
+</html> 
