@@ -4,7 +4,7 @@ const API_KEY = "d6607a2bdc45d0f149579922e28fa5ad";
     let feelslikeElement = document.getElementById("feelsLike");
     let humidityElement = document.getElementById("humidity");
     let windSpeedElement = document.getElementById("windSpeed");
-
+    let locationElement = document.getElementById("location");
 
     async function getWeather(city){
 
@@ -20,6 +20,7 @@ const API_KEY = "d6607a2bdc45d0f149579922e28fa5ad";
             document.getElementById("humidity").textContent =`${data.main.humidity}%`;
             document.getElementById("windSpeed").textContent =`${data.wind.speed} km/h`;
             document.getElementById("cityName").textContent =`${city} `;
+            document.getElementById("location").textContent=`${city}`
 
     }
     let searchbtn = document.getElementById("searchBtn")
@@ -32,3 +33,5 @@ const API_KEY = "d6607a2bdc45d0f149579922e28fa5ad";
     window.addEventListener("DOMContentLoaded", () => {
         getWeather("Amravati");
     });
+
+    
