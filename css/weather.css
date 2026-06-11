@@ -183,6 +183,7 @@ body{
 /* main section */
 .weatherDashboard{
     margin :0px 160px;
+    margin-bottom: 30px;
     padding: 24px;
     box-shadow: 0px 0px 20px lightgrey;
     border-radius: 1.5rem;

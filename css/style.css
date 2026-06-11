@@ -710,7 +710,14 @@ font-size:13px;
     font-weight:600;
     cursor:pointer;
 }
-
+.viewallBtn{
+    border: none ;
+    padding: 1rem;
+    background-color: var(--neutral);
+    cursor: pointer;
+    font-size: 1rem;
+    color: var(--secondary);
+}
 .chatBtn{
     width:55px;
     border:1px solid var(--border);

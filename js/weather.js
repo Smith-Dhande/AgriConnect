@@ -26,26 +26,13 @@ async function getWeather(city) {
             return;
         }
 
-        tempElement.textContent =
-            `${Math.round(data.main.temp)}°C`;
-
-        conditionElement.textContent =
-            data.weather[0].main;
-
-        feelslikeElement.textContent =
-            `Feels Like: ${Math.round(data.main.feels_like)}°C`;
-
-        humidityElement.textContent =
-            `${data.main.humidity}%`;
-
-        windSpeedElement.textContent =
-            `${data.wind.speed} km/h`;
-
-        locationElement.textContent =
-            data.name;
-
-        cityNameElement.textContent =
-            data.name;
+        tempElement.textContent =`${Math.round(data.main.temp)}°C`;
+        conditionElement.textContent = data.weather[0].main;
+        feelslikeElement.textContent = `Feels Like: ${Math.round(data.main.feels_like)}°C`;
+        humidityElement.textContent = `${data.main.humidity}%`;
+        windSpeedElement.textContent = `${data.wind.speed} km/h`;
+        locationElement.textContent = data.name;
+        cityNameElement.textContent = data.name;
 
     }
     catch (error) {
@@ -59,7 +46,7 @@ async function getWeather(city) {
     }
 }
 
-/* Search Button */
+//Search Button 
 
 searchBtn.addEventListener("click", () => {
 
@@ -76,22 +63,19 @@ searchBtn.addEventListener("click", () => {
 
 });
 
-/* Enter Key Support */
+// Enter Key Support 
 
 
 locationInput.addEventListener("keydown", (event) => {
 
     if(event.key === "Enter"){
 
-        const city =
-            locationInput.value.trim();
+        const city = locationInput.value.trim();
 
         if(city !== ""){
             getWeather(city);
         }
-
         locationInput.style.display = "none";
-
         locationElement.style.display = "block";
     }
 
@@ -100,22 +84,20 @@ locationInput.addEventListener("keydown", (event) => {
 // on clicking outside
 locationInput.addEventListener("blur", () => {
 
-    const city =
-        locationInput.value.trim();
+    const city = locationInput.value.trim();
 
     if(city !== ""){
         getWeather(city);
     }
 
     locationInput.style.display = "none";
-
     locationElement.style.display = "block";
 
 });
 
 
 
-//
+//onclick event listner
 
 locationElement.addEventListener("click", () => {
 
@@ -129,7 +111,7 @@ locationElement.addEventListener("click", () => {
 
 });
 
-/* Default Weather On Page Load */
+// Default Weather On Page Load 
 
 window.addEventListener("DOMContentLoaded", () => {
 
