@@ -1,753 +1,833 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marketplace</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="stylesheet" href="css/marketplace.css">
-</head>
-<body>
-    <div class="parent">
-        <!-- Navigation bar -->
-        <div class="nav">
-            <div class="navleft">
-                <div class="logo">
-                    <img src="images/logo.png" alt="logo">
-                </div>
-                <div class="navlinks">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="marketplace.html">Marketplace</a></li>
-                        <li><a href="#">Market Rates</a></li>
-                        <li><a href="weather.html">Weather</a></li>
-                        <li><a href="#">Fertiliser Advisor</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="navright">
-                <a href="#">Login</a>
-                <button>Sell Your Crops</button>
-            </div>
-        </div>
-
-        <div class="search">
-
-            <div class="searchbar">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input
-                    type="search"
-                    name="searchbar"
-                    id="searchbar"
-                    placeholder="Search crops, farmers, or locations"
-                >
-            </div>
-
-            <button class="filter">
-                <i class="fa-solid fa-filter"></i>
-                Filter
-            </button>
-
-            <select class="sort">
-                <option>Sort: Newest</option>
-                <option>Price: Low to High</option>
-                <option>Price: High to Low</option>
-                <option>Highest Rated</option>
-            </select>
-
-        </div>
-        <div class="quickfilters">
-            <ul>
-                <li><a href="#">All Crops</a></li>
-                <li><a href="#">Wheat</a></li>
-                <li><a href="#">Rice</a></li>
-                <li><a href="#">Cotton</a></li>
-                <li><a href="#">Soyabeans</a></li>
-                <li><a href="#">Vegitables</a></li>
-                <li><a href="#">Fruits</a></li>
-                <li><a href="#">Organics</a></li>
-            </ul>
-        </div>
-
-        <div class="featuredlistings">
-            <div class="featuredlistingstrip">
-                <div class="txt">Featured listing</div>
-                <div class="viewall">View all preminum</div>
-            </div>
-            <div class="featuredCards">
-                <div class="featuredCard">
-                    <div class="featuredImage">
-                        <img src="images/wheat.png" alt="Premium Sharbati Wheat">
-                        <div class="verifiedBadge">
-                            <i class="fa-regular fa-circle-check"></i>
-                            Verified Seller
-                        </div>
-                    </div>
-                    <div class="featuredContent">
-                        <h3>Premium Sharbati Wheat</h3>
-                        <div class="featuredDetails">
-                            <div class="price">
-                                <p>PRICE</p>
-                                <h4>₹2,450</h4>
-                                <p>Per Quintal</p>
-                            </div>
-                            <div class="stock">
-                                <p>STOCK</p>
-                                <h4>450 </h4>
-                                <p>Quintals</p>
-                            </div>
-                        </div>
-                        <div class="location">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <span>Madhya Pradesh, India</span>
-                        </div>
-                        <button class="viewBtn">
-                            View Listing
-                        </button>
-                    </div>
-                </div>
-                <div class="featuredCard">
-                    <div class="featuredImage">
-                        <img src="images/rice.png" alt="Organic Basmati Rice">
-                        <div class="verifiedBadge">
-                            <i class="fa-regular fa-circle-check"></i>
-                            Verified Seller
-                        </div>
-                    </div>
-
-                    <div class="featuredContent">
-                        <h3>Organic Basmati Rice</h3>
-
-                        <div class="featuredDetails">
-                            <div class="price">
-                                <p>PRICE</p>
-                                <h4>₹6,800 </h4>
-                                <p>Per Quintal</p>
-                            </div>
-
-                            <div class="stock">
-                                <p>STOCK</p>
-                                <h4>120 </h4>
-                                <p>Quintals</p>
-                            </div>
-                        </div>
-
-                        <div class="location">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <span>Haryana, India</span>
-                        </div>
-
-                        <button class="viewBtn">
-                            View Listing
-                        </button>
-                    </div>
-                </div>
-                <div class="featuredCard">
-                    <div class="featuredImage">
-                        <img src="images/cotton.png" alt="Long Staple Cotton">
-                        <div class="verifiedBadge">
-                            <i class="fa-regular fa-circle-check"></i>
-                            Verified Seller
-                        </div>
-                    </div>
-
-                    <div class="featuredContent">
-                        <h3>Long Staple Cotton</h3>
-
-                        <div class="featuredDetails">
-                            <div class="price">
-                                <p>PRICE</p>
-                                <h4>₹8,100 </h4>
-                                <p>Per Quintal</p>
-                            </div>
-
-                            <div class="stock">
-                                <p>STOCK</p>
-                                <h4>85 </h4>
-                                <p>Quintals</p>
-                            </div>
-                        </div>
-
-                        <div class="location">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <span>Gujarat, India</span>
-                        </div>
-
-                        <button class="viewBtn">
-                            View Listing
-                        </button>
-                    </div>
-                </div>
-                <div class="featuredCard">
-                    <div class="featuredImage">
-                        <img src="images/onion.png" alt="Long Staple Cotton">
-                        <div class="verifiedBadge">
-                            <i class="fa-regular fa-circle-check"></i>
-                            Verified Seller
-                        </div>
-                    </div>
-
-                    <div class="featuredContent">
-                        <h3>Premium Red Onions</h3>
-
-                        <div class="featuredDetails">
-                            <div class="price">
-                                <p>PRICE</p>
-                                <h4>₹5,100 </h4>
-                                <p>Per Quintal</p>
-                            </div>
-
-                            <div class="stock">
-                                <p>STOCK</p>
-                                <h4>15</h4>
-                                <p>Quintals</p>
-                            </div>
-                        </div>
-
-                        <div class="location">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <span>Gujarat, India</span>
-                        </div>
-
-                        <button class="viewBtn">
-                            View Listing
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- browse all crops section -->
-        <div class="allcrops">
-            <div class="croplistingstrip">
-                <div class="croptxt">
-                    <h2>Grains Marketplace</h2>
-                    <p>Premium grains from verified farmers</p>
-                </div>
-            </div>    
-        
-        <div class="grainSection">
-            <div class="productsGrid">
-            <!-- 1 -->
-                <div class="productCard">
-                    <div class="productImage">
-                        <img src="images/corn.png" alt="Yellow Corn">
-                        <div class="productTag">
-                            ORGANIC
-                        </div>
-                        <button class="wishlistBtn">
-                            <i class="fa-regular fa-heart"></i>
-                        </button>
-                    </div>
-                    <div class="productContent">
-                        <div class="productLocation">
-                            <i class="fa-solid fa-location-dot"></i>
-                            Punjab
-                        </div>
-                        <h3>Yellow Corn</h3>
-                        <div class="productPrice">
-                            <span class="price">₹2,100</span>
-                            <span class="unit">/ Qtl</span>
-                        </div>
-                        <p class="availability">
-                            Avail: 1000 Quintals
-                        </p>
-                        <div class="sellerRow">
-                            <div class="sellerInfo">
-                                <div class="sellerAvatar">G</div>
-                                <div class="sellerDetails">
-                                    <h4>GreenField Farms</h4>
-                                    <p>⭐ 4.8</p>
-                                </div>
-                            </div>
-                            <i class="fa-regular fa-circle-check"></i>
-                        </div>
-                        <button class="contactBtn">
-                            Contact Seller
-                        </button>
-
-                    </div>
-
-                </div>
-                <!-- 2 -->
-                <div class="productCard">
-                    <div class="productImage">
-                        <img src="images/peanut.png" alt="Peanut">
-                        <div class="productTag">
-                            ORGANIC
-                        </div>
-                        <button class="wishlistBtn">
-                            <i class="fa-regular fa-heart"></i>
-                        </button>
-                    </div>
-                    <div class="productContent">
-                        <div class="productLocation">
-                            <i class="fa-solid fa-location-dot"></i>
-                            Maharashtra
-                        </div>
-                        <h3>Peanuts</h3>
-                        <div class="productPrice">
-                            <span class="price">₹3,000</span>
-                            <span class="unit">/ Qtl</span>
-                        </div>
-                        <p class="availability">
-                            Avail: 1200 Quintals
-                        </p>
-                        <div class="sellerRow">
-                            <div class="sellerInfo">
-                                <div class="sellerAvatar">G</div>
-                                <div class="sellerDetails">
-                                    <h4>XYZ Farms</h4>
-                                    <p>⭐ 4.2</p>
-                                </div>
-                            </div>
-                            <i class="fa-regular fa-circle-check"></i>
-                        </div>
-                        <button class="contactBtn">
-                            Contact Seller
-                        </button>
-
-                    </div>
-
-                </div>
-                <!-- 3 -->
-                <div class="productCard">
-                    <div class="productImage">
-                        <img src="images/soyabeans.png" alt="Soyabeans">
-                        <div class="productTag">
-                            ORGANIC
-                        </div>
-                        <button class="wishlistBtn">
-                            <i class="fa-regular fa-heart"></i>
-                        </button>
-                    </div>
-                    <div class="productContent">
-                        <div class="productLocation">
-                            <i class="fa-solid fa-location-dot"></i>
-                            Maharashtra
-                        </div>
-                        <h3>Soyabeans</h3>
-                        <div class="productPrice">
-                            <span class="price">₹5,100</span>
-                            <span class="unit">/ Qtl</span>
-                        </div>
-                        <p class="availability">
-                            Avail: 100 Quintals
-                        </p>
-                        <div class="sellerRow">
-                            <div class="sellerInfo">
-                                <div class="sellerAvatar">G</div>
-                                <div class="sellerDetails">
-                                    <h4>GreenField Farms</h4>
-                                    <p>⭐ 4.8</p>
-                                </div>
-                            </div>
-                            <i class="fa-regular fa-circle-check"></i>
-                        </div>
-                        <button class="contactBtn">
-                            Contact Seller
-                        </button>
-
-                    </div>
-
-                </div>
-                <!-- 4 -->
-                <div class="productCard">
-                    <div class="productImage">
-                        <img src="images/soyabeam.png" alt="Yellow Corn">
-                        <div class="productTag">
-                            ORGANIC
-                        </div>
-                        <button class="wishlistBtn">
-                            <i class="fa-regular fa-heart"></i>
-                        </button>
-                    </div>
-                    <div class="productContent">
-                        <div class="productLocation">
-                            <i class="fa-solid fa-location-dot"></i>
-                            Madhya Pradesh
-                        </div>
-                        <h3>Soyabean</h3>
-                        <div class="productPrice">
-                            <span class="price">₹2,200</span>
-                            <span class="unit">/ Qtl</span>
-                        </div>
-                        <p class="availability">
-                            Avail: 1000 Quintals
-                        </p>
-                        <div class="sellerRow">
-                            <div class="sellerInfo">
-                                <div class="sellerAvatar">G</div>
-                                <div class="sellerDetails">
-                                    <h4>GreenField Farms</h4>
-                                    <p>⭐ 4.8</p>
-                                </div>
-                            </div>
-                            <i class="fa-regular fa-circle-check"></i>
-                        </div>
-                        <button class="contactBtn">
-                            Contact Seller
-                        </button>
-
-                    </div>
-
-                </div>
-                <!-- 5 -->
-                <div class="productCard">
-                    <div class="productImage">
-                        <img src="images/rice.png" alt="Yellow Corn">
-                        <div class="productTag">
-                            ORGANIC
-                        </div>
-                        <button class="wishlistBtn">
-                            <i class="fa-regular fa-heart"></i>
-                        </button>
-                    </div>
-                    <div class="productContent">
-                        <div class="productLocation">
-                            <i class="fa-solid fa-location-dot"></i>
-                            Andra Pradesh
-                        </div>
-                        <h3>Primium Rice</h3>
-                        <div class="productPrice">
-                            <span class="price">₹4,100</span>
-                            <span class="unit">/ Qtl</span>
-                        </div>
-                        <p class="availability">
-                            Avail: 1000 Quintals
-                        </p>
-                        <div class="sellerRow">
-                            <div class="sellerInfo">
-                                <div class="sellerAvatar">G</div>
-                                <div class="sellerDetails">
-                                    <h4>GreenField Farms</h4>
-                                    <p>⭐ 4.8</p>
-                                </div>
-                            </div>
-                            <i class="fa-regular fa-circle-check"></i>
-                        </div>
-                        <button class="contactBtn">
-                            Contact Seller
-                        </button>
-
-                    </div>
-
-                </div>
-            </div>
-                <div class="showmore">
-                <button onclick="window.location.href='grains.html'">View All Grains</button>
-            </div>
-        </div>
-        
-
-        <div class="vegetableSection">
-            <div class="croplistingstrip">
-                <div class="croptxt">
-                    <h2>Vegetables Marketplace</h2>
-                    <p>Fresh vegetables from verified farmers</p>
-                </div>
-            </div>
-
-            <div class="productsGrid">
-            <!-- 6 -->
-                <div class="productCard">
-                    <div class="productImage">
-                        <img src="images/chilli.png" alt="Yellow Corn">
-                        <div class="productTag">
-                            ORGANIC
-                        </div>
-                        <button class="wishlistBtn">
-                            <i class="fa-regular fa-heart"></i>
-                        </button>
-                    </div>
-                    <div class="productContent">
-                        <div class="productLocation">
-                            <i class="fa-solid fa-location-dot"></i>
-                            Tamilnadu
-                        </div>
-                        <h3>Green Chilli</h3>
-                        <div class="productPrice">
-                            <span class="price">₹3,000</span>
-                            <span class="unit">/ Qtl</span>
-                        </div>
-                        <p class="availability">
-                            Avail: 1000 Quintals
-                        </p>
-                        <div class="sellerRow">
-                            <div class="sellerInfo">
-                                <div class="sellerAvatar">G</div>
-                                <div class="sellerDetails">
-                                    <h4>GreenField Farms</h4>
-                                    <p>⭐ 4.8</p>
-                                </div>
-                            </div>
-                            <i class="fa-regular fa-circle-check"></i>
-                        </div>
-                        <button class="contactBtn">
-                            Contact Seller
-                        </button>
-
-                    </div>
-
-                </div>
-                <!-- 7 -->
-                <div class="productCard">
-                    <div class="productImage">
-                        <img src="images/blackpepper.png" alt="blackpepper">
-                        <div class="productTag">
-                            ORGANIC
-                        </div>
-                        <button class="wishlistBtn">
-                            <i class="fa-regular fa-heart"></i>
-                        </button>
-                    </div>
-                    <div class="productContent">
-                        <div class="productLocation">
-                            <i class="fa-solid fa-location-dot"></i>
-                            Hariyana
-                        </div>
-                        <h3>Blackpepper</h3>
-                        <div class="productPrice">
-                            <span class="price">₹6,000</span>
-                            <span class="unit">/ Qtl</span>
-                        </div>
-                        <p class="availability">
-                            Avail: 1000 Quintals
-                        </p>
-                        <div class="sellerRow">
-                            <div class="sellerInfo">
-                                <div class="sellerAvatar">G</div>
-                                <div class="sellerDetails">
-                                    <h4>GreenField Farms</h4>
-                                    <p>⭐ 4.8</p>
-                                </div>
-                            </div>
-                            <i class="fa-regular fa-circle-check"></i>
-                        </div>
-                        <button class="contactBtn">
-                            Contact Seller
-                        </button>
-
-                    </div>
-
-                </div>
-                <!-- 8 -->
-                <div class="productCard">
-                    <div class="productImage">
-                        <img src="images/garlic.png" alt="Yellow Corn">
-                        <div class="productTag">
-                            ORGANIC
-                        </div>
-                        <button class="wishlistBtn">
-                            <i class="fa-regular fa-heart"></i>
-                        </button>
-                    </div>
-                    <div class="productContent">
-                        <div class="productLocation">
-                            <i class="fa-solid fa-location-dot"></i>
-                            Punjab
-                        </div>
-                        <h3>Fresh Garlic</h3>
-                        <div class="productPrice">
-                            <span class="price">₹3,100</span>
-                            <span class="unit">/ Qtl</span>
-                        </div>
-                        <p class="availability">
-                            Avail: 1000 Quintals
-                        </p>
-                        <div class="sellerRow">
-                            <div class="sellerInfo">
-                                <div class="sellerAvatar">G</div>
-                                <div class="sellerDetails">
-                                    <h4>GreenField Farms</h4>
-                                    <p>⭐ 4.8</p>
-                                </div>
-                            </div>
-                            <i class="fa-regular fa-circle-check"></i>
-                        </div>
-                        <button class="contactBtn">
-                            Contact Seller
-                        </button>
-
-                    </div>
-
-                </div>
-                <!-- 9 -->
-                <div class="productCard"> 
-                    <div class="productImage">
-                        <img src="images/potato.jpg" alt="Yellow Corn">
-                        <div class="productTag">
-                            ORGANIC
-                        </div>
-                        <button class="wishlistBtn">
-                            <i class="fa-regular fa-heart"></i>
-                        </button>
-                    </div>
-                    <div class="productContent">
-                        <div class="productLocation">
-                            <i class="fa-solid fa-location-dot"></i>
-                            Punjab
-                        </div>
-                        <h3>Potato</h3>
-                        <div class="productPrice">
-                            <span class="price">₹2,100</span>
-                            <span class="unit">/ Qtl</span>
-                        </div>
-                        <p class="availability">
-                            Avail: 1000 Quintals
-                        </p>
-                        <div class="sellerRow">
-                            <div class="sellerInfo">
-                                <div class="sellerAvatar">G</div>
-                                <div class="sellerDetails">
-                                    <h4>GreenField Farms</h4>
-                                    <p>⭐ 4.8</p>
-                                </div>
-                            </div>
-                            <i class="fa-regular fa-circle-check"></i>
-                        </div>
-                        <button class="contactBtn">
-                            Contact Seller
-                        </button>
-
-                    </div>
-
-                </div>
-                <!-- 10 -->
-                <div class="productCard">
-                    <div class="productImage">
-                        <img src="images/onion.png" alt="Yellow Corn">
-                        <div class="productTag">
-                            ORGANIC
-                        </div>
-                        <button class="wishlistBtn">
-                            <i class="fa-regular fa-heart"></i>
-                        </button>
-                    </div>
-                    <div class="productContent">
-                        <div class="productLocation">
-                            <i class="fa-solid fa-location-dot"></i>
-                            Punjab
-                        </div>
-                        <h3>Red Onion</h3>
-                        <div class="productPrice">
-                            <span class="price">₹4,000</span>
-                            <span class="unit">/ Qtl</span>
-                        </div>
-                        <p class="availability">
-                            Avail: 1000 Quintals
-                        </p>
-                        <div class="sellerRow">
-                            <div class="sellerInfo">
-                                <div class="sellerAvatar">G</div>
-                                <div class="sellerDetails">
-                                    <h4>GreenField Farms</h4>
-                                    <p>⭐ 4.8</p>
-                                </div>
-                            </div>
-                            <i class="fa-regular fa-circle-check"></i>
-                        </div>
-                        <button class="contactBtn">
-                            Contact Seller
-                        </button>
-
-                    </div>
-
-                </div>      
-            </div>
-            <div class="showmore">
-                <button onclick="window.location.href='vegitable.html'">View All Vegetables</button>
-            </div>
-        </div>
-        
-        </div>
-
-
-        <!-- CTA Section -->
-         <div class="ctaSection">
-            <div class="ctaContent">
-                <h2>Start Selling Smarter Today</h2>
-
-                <p>
-                    Join over 50,000 farmers and buyers transforming
-                    the agricultural landscape of India.
-                </p>
-
-                <div class="ctaButtons">
-                    <button class="farmerBtn">
-                        Register as Farmer
-                    </button>
-
-                    <button class="buyerBtn">
-                        Register as Buyer
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- footer section -->
-            <footer class="footer">
-
-                <div class="footerGrid">
-
-                    <div class="footerCol">
-
-                        <div class="footerLogo">
-                            <img src="images/logo.png" alt="AgriConnect">
-                        </div>
-
-                        <p>
-                            AgriConnect helps farmers connect directly with buyers,
-                            access market insights and grow smarter.
-                        </p>
-
-                    </div>
-
-                    <div class="footerCol">
-
-                        <h3>Quick Links</h3>
-
-                        <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="marketplace.html">Marketplace</a></li>
-                            <li><a href="#">Market Rates</a></li>
-                            <li><a href="weather.html">Weather</a></li>
-                        </ul>
-
-                    </div>
-
-                    <div class="footerCol">
-
-                        <h3>Services</h3>
-
-                        <ul>
-                            <li><a href="marketplace.html">Crop Marketplace</a></li>
-                            <li><a href="weather.html">Weather Forecast</a></li>
-                            <li><a href="#">Market Insights</a></li>
-                            <li><a href="#">Fertilizer Advisor</a></li>
-                        </ul>
-
-                    </div>
-
-                    <div class="footerCol">
-
-                        <h3>Contact</h3>
-
-                        <ul>
-                            <li><i class="fa-solid fa-location-dot"></i> Amravati, Maharashtra</li>
-                            <li><i class="fa-solid fa-phone"></i> +91 9876543210</li>
-                            <li><i class="fa-solid fa-envelope"></i> support@agriconnect.com</li>
-                        </ul>
-
-                    </div>
-
-                </div>
-
-                <div class="footerBottom">
-                    <p>© 2026 AgriConnect. All Rights Reserved.</p>
-                </div>
-
-            </footer>
-    </div>
-</body>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Marketplace</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+		<link rel="stylesheet" href="css/marketplace.css">
+	</head>
+	<body>
+		<div class="parent">
+			<!-- Navigation bar -->
+			<div class="nav">
+				<div class="navleft">
+					<div class="logo">
+						<img src="images/logo.png" alt="logo">
+					</div>
+					<div class="navlinks">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="marketplace.html">Marketplace</a></li>
+							<li><a href="#">Market Rates</a></li>
+							<li><a href="weather.html">Weather</a></li>
+							<li><a href="#">Fertiliser Advisor</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="navright">
+					<a href="#">Login</a>
+					<button>Sell Your Crops</button>
+				</div>
+			</div>
+			
+                <!-- Marketplace Hero -->
+				<section class="marketHero">
+				<div class="search">
+					<div class="searchbar">
+						<i class="fa-solid fa-magnifying-glass"></i>
+						<input
+							type="search"
+							name="searchbar"
+							id="searchbar"
+							placeholder="Search crops, farmers, or locations"
+							>
+					</div>
+					<button class="filter">
+					<i class="fa-solid fa-filter"></i>
+					Filter
+					</button>
+					<select class="sort">
+						<option>Sort: Newest</option>
+						<option>Price: Low to High</option>
+						<option>Price: High to Low</option>
+						<option>Highest Rated</option>
+					</select>
+				</div>
+				<div class="quickfilters">
+					<ul>
+						<li><a href="#">All Crops</a></li>
+						<li><a href="#">Wheat</a></li>
+						<li><a href="#">Rice</a></li>
+						<li><a href="#">Cotton</a></li>
+						<li><a href="#">Soyabeans</a></li>
+						<li><a href="#">Vegitables</a></li>
+						<li><a href="#">Fruits</a></li>
+						<li><a href="#">Organics</a></li>
+					</ul>
+				</div>
+				
+					<div class="heroContent">
+						<h1>
+							India's Trusted Agricultural Marketplace
+						</h1>
+						<!-- <p>
+							Connect directly with verified farmers and buyers across India
+							with transparent pricing, secure transactions and real-time
+							market intelligence.
+						</p> -->
+						<div class="heroButtons">
+							<button class="browseBtn">
+							Browse Crops
+							</button>
+							<button class="sellBtn">
+							Start Selling
+							</button>
+						</div>
+					</div>
+					<div class="marketStats">
+						<div class="statItem">
+							<h2>12,842</h2>
+							<p>Active Listings</p>
+						</div>
+						<div class="statItem">
+							<h2>4,200+</h2>
+							<p>Verified Farmers</p>
+						</div>
+						<div class="statItem">
+							<h2>1,150</h2>
+							<p>Active Buyers</p>
+						</div>
+						<div class="statItem">
+							<h2>24</h2>
+							<p>States Covered</p>
+						</div>
+					</div>
+				</section>
+                <div class="container">
+				<!-- featured crops banner -->
+				<section class="featuredBanner">
+					<div class="bannerImage">
+						<img src="images/wheat.png" alt="Premium Wheat">
+					</div>
+					<div class="bannerContent">
+						<span class="bannerTag">
+						Featured Crop Of The Week
+						</span>
+						<h2>
+							Premium Sharbati Wheat
+						</h2>
+						<p>
+							High buyer demand across North India.
+							Available stock: 450 Quintals.
+						</p>
+						<div class="bannerInfo">
+							<div>
+								<span>Market Price</span>
+								<h3>₹2,100 / Qtl</h3>
+							</div>
+							<div>
+								<span>Seller</span>
+								<h3>Mr. ABC XYZ</h3>
+							</div>
+							<div>
+								<span>Rating</span>
+								<h3>4.9 ★</h3>
+							</div>
+						</div>
+						<div class="bannerButtons">
+							<button class="viewBtn">
+							View Listing
+							</button>
+							<button class="contactSellerBtn">
+							Contact Seller
+							</button>
+						</div>
+					</div>
+				</section>
+				<!-- Marketplace Layout -->
+				<section class="marketplaceLayout">
+					<!-- LEFT SIDEBAR -->
+    					<div class="marketSidebar">
+						<!-- Trending Crops -->
+						<div class="sidebarCard">
+							<div class="sidebarTitle">
+								<h3>Trending Crops</h3>
+							</div>
+							<div class="trendItem">
+								<span>🌾 Wheat</span>
+								<span class="positive">+4.2%</span>
+							</div>
+							<div class="trendItem">
+								<span>🍚 Rice</span>
+								<span class="negative">-1.5%</span>
+							</div>
+							<div class="trendItem">
+								<span>🧅 Onion</span>
+								<span class="positive">+12.8%</span>
+							</div>
+							<div class="trendItem">
+								<span>🧵 Cotton</span>
+								<span class="positive">+2.4%</span>
+							</div>
+							<div class="trendItem">
+								<span>🌱 Soybean</span>
+								<span class="negative">-0.8%</span>
+							</div>
+						</div>
+						<!-- Live Activity -->
+						<div class="sidebarCard">
+							<div class="sidebarTitle">
+								<h3>Live Activity</h3>
+							</div>
+							<div class="activityItem">
+								<h4>Wheat Sold</h4>
+								<p>Batch #8821 • 2 min ago</p>
+							</div>
+							<div class="activityItem">
+								<h4>Rice Listed</h4>
+								<p>Basmati • 5 min ago</p>
+							</div>
+							<div class="activityItem">
+								<h4>Transaction Complete</h4>
+								<p>Cotton • 15 min ago</p>
+							</div>
+						</div>
+						<!-- Top Farmer -->
+						<div class="topFarmerCard">
+							<span class="farmerTag">
+							Top Rated Farmer
+							</span>
+							<div class="farmerProfile">
+								<img src="images/user1.png" alt="Farmer">
+								<div>
+									<h3>Mr. ABC XYZ</h3>
+									<p>Indore, Madhya Pradesh</p>
+								</div>
+							</div>
+							<div class="farmerStats">
+								<div>
+									<h4>1,240 Qtl</h4>
+									<span>Sales</span>
+								</div>
+								<div>
+									<h4>4.8/5</h4>
+									<span>Rating</span>
+								</div>
+							</div>
+							<button class="profileBtn">
+							View Profile
+							</button>
+						</div>
+					</div>
+					<div class="marketContent">
+				<section class="premiumShowcase">
+					<div class="sectionHeader">
+						<div>
+							<h2>Premium Crop Showcase</h2>
+							<p>
+								Handpicked premium listings from verified sellers.
+							</p>
+						</div>
+						<a href="#">
+						View Editorial →
+						</a>
+					</div>
+					<div class="premiumGrid">
+						<!-- Card 1 -->
+						<div class="premiumCard">
+							<div class="premiumImage">
+								<img src="images/rice.png" alt="">
+								<span class="verifiedTag">
+								VERIFIED
+								</span>
+							</div>
+							<div class="premiumContent">
+								<h3>Aged Basmati Rice</h3>
+								<div class="premiumPrice">
+									₹6,800
+									<span>/Qtl</span>
+								</div>
+								<p>
+									120 Quintals Available
+								</p>
+								<div class="premiumLocation">
+									Karnal, Haryana
+								</div>
+								<div class="premiumSeller">
+									<span>SM</span>
+									S. Maurya
+									★ 4.7
+								</div>
+								<div class="premiumActions">
+									<button>
+									View Listing
+									</button>
+									<button class="contactSellerBtn">
+									Contact Seller
+									</button>
+								</div>
+							</div>
+						</div>
+						<!-- Card 2 -->
+						<div class="premiumCard">
+							<div class="premiumImage">
+								<img src="images/ginger.png" alt="">
+								<span class="verifiedTag">
+								VERIFIED
+								</span>
+							</div>
+							<div class="premiumContent">
+								<h3>Organic Fresh Ginger</h3>
+								<div class="premiumPrice">
+									₹4,200
+									<span>/Qtl</span>
+								</div>
+								<p>
+									90 Quintals Available
+								</p>
+								<div class="premiumLocation">
+									Wayanad, Kerala
+								</div>
+								<div class="premiumSeller">
+									<span>KK</span>
+									K. Krishnan
+									★ 4.9
+								</div>
+								<div class="premiumActions">
+									<button>
+									View Listing
+									</button>
+									<button class="contactSellerBtn">
+									Contact Seller
+									</button>
+								</div>
+							</div>
+						</div>
+						<!-- Card 3 -->
+						<div class="premiumCard">
+							<div class="premiumImage">
+								<img src="images/blackpepper.png" alt="">
+								<span class="verifiedTag">
+								VERIFIED
+								</span>
+							</div>
+							<div class="premiumContent">
+								<h3>Tellicherry Black Pepper</h3>
+								<div class="premiumPrice">
+									₹52,000
+									<span>/Qtl</span>
+								</div>
+								<p>
+									15 Quintals Available
+								</p>
+								<div class="premiumLocation">
+									Idukki, Kerala
+								</div>
+								<div class="premiumSeller">
+									<span>RA</span>
+									R. Abraham
+									★ 4.8
+								</div>
+								<div class="premiumActions">
+									<button>
+									View Listing
+									</button>
+									<button class="contactSellerBtn">
+									Contact Seller
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- browse all crops section -->
+					<div class="grainSection">
+						<div class="sectionHeader">
+							<div>
+								<h2>Grains Marketplace</h2>
+								<p>
+									Direct trade listings from verified grain producers.
+								</p>
+							</div>
+							<a href="grains.html">
+							View All →
+							</a>
+						</div>
+						<div class="productsGrid">
+							<!-- 1 -->
+							<div class="productCard">
+								<div class="productImage">
+									<img src="images/corn.png" alt="Yellow Corn">
+									<div class="productTag">
+										ORGANIC
+									</div>
+									<button class="wishlistBtn">
+									<i class="fa-regular fa-heart"></i>
+									</button>
+								</div>
+								<div class="productContent">
+									<div class="productLocation">
+										<i class="fa-solid fa-location-dot"></i>
+										Punjab
+									</div>
+									<h3>Yellow Corn</h3>
+									<div class="productPrice">
+										<span class="price">₹2,100</span>
+										<span class="unit">/ Qtl</span>
+									</div>
+									<p class="availability">
+										Avail: 1000 Quintals
+									</p>
+									<div class="sellerRow">
+										<div class="sellerInfo">
+											<div class="sellerAvatar">G</div>
+											<div class="sellerDetails">
+												<h4>GreenField Farms</h4>
+												<p>⭐ 4.8</p>
+											</div>
+										</div>
+										<i class="fa-regular fa-circle-check"></i>
+									</div>
+									<button class="contactBtn">
+									Contact Seller
+									</button>
+								</div>
+							</div>
+							<!-- 2 -->
+							<div class="productCard">
+								<div class="productImage">
+									<img src="images/peanut.png" alt="Peanut">
+									<div class="productTag">
+										ORGANIC
+									</div>
+									<button class="wishlistBtn">
+									<i class="fa-regular fa-heart"></i>
+									</button>
+								</div>
+								<div class="productContent">
+									<div class="productLocation">
+										<i class="fa-solid fa-location-dot"></i>
+										Maharashtra
+									</div>
+									<h3>Peanuts</h3>
+									<div class="productPrice">
+										<span class="price">₹3,000</span>
+										<span class="unit">/ Qtl</span>
+									</div>
+									<p class="availability">
+										Avail: 1200 Quintals
+									</p>
+									<div class="sellerRow">
+										<div class="sellerInfo">
+											<div class="sellerAvatar">G</div>
+											<div class="sellerDetails">
+												<h4>XYZ Farms</h4>
+												<p>⭐ 4.2</p>
+											</div>
+										</div>
+										<i class="fa-regular fa-circle-check"></i>
+									</div>
+									<button class="contactBtn">
+									Contact Seller
+									</button>
+								</div>
+							</div>
+							<!-- 3 -->
+							<div class="productCard">
+								<div class="productImage">
+									<img src="images/soyabeans.png" alt="Soyabeans">
+									<div class="productTag">
+										ORGANIC
+									</div>
+									<button class="wishlistBtn">
+									<i class="fa-regular fa-heart"></i>
+									</button>
+								</div>
+								<div class="productContent">
+									<div class="productLocation">
+										<i class="fa-solid fa-location-dot"></i>
+										Maharashtra
+									</div>
+									<h3>Soyabeans</h3>
+									<div class="productPrice">
+										<span class="price">₹5,100</span>
+										<span class="unit">/ Qtl</span>
+									</div>
+									<p class="availability">
+										Avail: 100 Quintals
+									</p>
+									<div class="sellerRow">
+										<div class="sellerInfo">
+											<div class="sellerAvatar">G</div>
+											<div class="sellerDetails">
+												<h4>GreenField Farms</h4>
+												<p>⭐ 4.8</p>
+											</div>
+										</div>
+										<i class="fa-regular fa-circle-check"></i>
+									</div>
+									<button class="contactBtn">
+									Contact Seller
+									</button>
+								</div>
+							</div>
+							<!-- 4 -->
+							<div class="productCard">
+								<div class="productImage">
+									<img src="images/soyabeam.png" alt="Yellow Corn">
+									<div class="productTag">
+										ORGANIC
+									</div>
+									<button class="wishlistBtn">
+									<i class="fa-regular fa-heart"></i>
+									</button>
+								</div>
+								<div class="productContent">
+									<div class="productLocation">
+										<i class="fa-solid fa-location-dot"></i>
+										Madhya Pradesh
+									</div>
+									<h3>Soyabean</h3>
+									<div class="productPrice">
+										<span class="price">₹2,200</span>
+										<span class="unit">/ Qtl</span>
+									</div>
+									<p class="availability">
+										Avail: 1000 Quintals
+									</p>
+									<div class="sellerRow">
+										<div class="sellerInfo">
+											<div class="sellerAvatar">G</div>
+											<div class="sellerDetails">
+												<h4>GreenField Farms</h4>
+												<p>⭐ 4.8</p>
+											</div>
+										</div>
+										<i class="fa-regular fa-circle-check"></i>
+									</div>
+									<button class="contactBtn">
+									Contact Seller
+									</button>
+								</div>
+							</div>
+							<!-- 5 -->
+							<div class="productCard">
+								<div class="productImage">
+									<img src="images/rice.png" alt="Yellow Corn">
+									<div class="productTag">
+										ORGANIC
+									</div>
+									<button class="wishlistBtn">
+									<i class="fa-regular fa-heart"></i>
+									</button>
+								</div>
+								<div class="productContent">
+									<div class="productLocation">
+										<i class="fa-solid fa-location-dot"></i>
+										Andra Pradesh
+									</div>
+									<h3>Primium Rice</h3>
+									<div class="productPrice">
+										<span class="price">₹4,100</span>
+										<span class="unit">/ Qtl</span>
+									</div>
+									<p class="availability">
+										Avail: 1000 Quintals
+									</p>
+									<div class="sellerRow">
+										<div class="sellerInfo">
+											<div class="sellerAvatar">G</div>
+											<div class="sellerDetails">
+												<h4>GreenField Farms</h4>
+												<p>⭐ 4.8</p>
+											</div>
+										</div>
+										<i class="fa-regular fa-circle-check"></i>
+									</div>
+									<button class="contactBtn">
+									Contact Seller
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="vegetableSection">
+						<div class="sectionHeader">
+							<div>
+								<h2>Vegetables Marketplace</h2>
+								<p>
+									Fresh vegetables sourced directly from farms.
+								</p>
+							</div>
+							<a href="vegitable.html">
+							View All →
+							</a>
+						</div>
+						<div class="productsGrid">
+							<!-- 6 -->
+							<div class="productCard">
+								<div class="productImage">
+									<img src="images/chilli.png" alt="Yellow Corn">
+									<div class="productTag">
+										ORGANIC
+									</div>
+									<button class="wishlistBtn">
+									<i class="fa-regular fa-heart"></i>
+									</button>
+								</div>
+								<div class="productContent">
+									<div class="productLocation">
+										<i class="fa-solid fa-location-dot"></i>
+										Tamilnadu
+									</div>
+									<h3>Green Chilli</h3>
+									<div class="productPrice">
+										<span class="price">₹3,000</span>
+										<span class="unit">/ Qtl</span>
+									</div>
+									<p class="availability">
+										Avail: 1000 Quintals
+									</p>
+									<div class="sellerRow">
+										<div class="sellerInfo">
+											<div class="sellerAvatar">G</div>
+											<div class="sellerDetails">
+												<h4>GreenField Farms</h4>
+												<p>⭐ 4.8</p>
+											</div>
+										</div>
+										<i class="fa-regular fa-circle-check"></i>
+									</div>
+									<button class="contactBtn">
+									Contact Seller
+									</button>
+								</div>
+							</div>
+							<!-- 7 -->
+							<div class="productCard">
+								<div class="productImage">
+									<img src="images/blackpepper.png" alt="blackpepper">
+									<div class="productTag">
+										ORGANIC
+									</div>
+									<button class="wishlistBtn">
+									<i class="fa-regular fa-heart"></i>
+									</button>
+								</div>
+								<div class="productContent">
+									<div class="productLocation">
+										<i class="fa-solid fa-location-dot"></i>
+										Hariyana
+									</div>
+									<h3>Blackpepper</h3>
+									<div class="productPrice">
+										<span class="price">₹6,000</span>
+										<span class="unit">/ Qtl</span>
+									</div>
+									<p class="availability">
+										Avail: 1000 Quintals
+									</p>
+									<div class="sellerRow">
+										<div class="sellerInfo">
+											<div class="sellerAvatar">G</div>
+											<div class="sellerDetails">
+												<h4>GreenField Farms</h4>
+												<p>⭐ 4.8</p>
+											</div>
+										</div>
+										<i class="fa-regular fa-circle-check"></i>
+									</div>
+									<button class="contactBtn">
+									Contact Seller
+									</button>
+								</div>
+							</div>
+							<!-- 8 -->
+							<div class="productCard">
+								<div class="productImage">
+									<img src="images/garlic.png" alt="Yellow Corn">
+									<div class="productTag">
+										ORGANIC
+									</div>
+									<button class="wishlistBtn">
+									<i class="fa-regular fa-heart"></i>
+									</button>
+								</div>
+								<div class="productContent">
+									<div class="productLocation">
+										<i class="fa-solid fa-location-dot"></i>
+										Punjab
+									</div>
+									<h3>Fresh Garlic</h3>
+									<div class="productPrice">
+										<span class="price">₹3,100</span>
+										<span class="unit">/ Qtl</span>
+									</div>
+									<p class="availability">
+										Avail: 1000 Quintals
+									</p>
+									<div class="sellerRow">
+										<div class="sellerInfo">
+											<div class="sellerAvatar">G</div>
+											<div class="sellerDetails">
+												<h4>GreenField Farms</h4>
+												<p>⭐ 4.8</p>
+											</div>
+										</div>
+										<i class="fa-regular fa-circle-check"></i>
+									</div>
+									<button class="contactBtn">
+									Contact Seller
+									</button>
+								</div>
+							</div>
+							<!-- 9 -->
+							<div class="productCard">
+								<div class="productImage">
+									<img src="images/potato.jpg" alt="Yellow Corn">
+									<div class="productTag">
+										ORGANIC
+									</div>
+									<button class="wishlistBtn">
+									<i class="fa-regular fa-heart"></i>
+									</button>
+								</div>
+								<div class="productContent">
+									<div class="productLocation">
+										<i class="fa-solid fa-location-dot"></i>
+										Punjab
+									</div>
+									<h3>Potato</h3>
+									<div class="productPrice">
+										<span class="price">₹2,100</span>
+										<span class="unit">/ Qtl</span>
+									</div>
+									<p class="availability">
+										Avail: 1000 Quintals
+									</p>
+									<div class="sellerRow">
+										<div class="sellerInfo">
+											<div class="sellerAvatar">G</div>
+											<div class="sellerDetails">
+												<h4>GreenField Farms</h4>
+												<p>⭐ 4.8</p>
+											</div>
+										</div>
+										<i class="fa-regular fa-circle-check"></i>
+									</div>
+									<button class="contactBtn">
+									Contact Seller
+									</button>
+								</div>
+							</div>
+							<!-- 10 -->
+							<div class="productCard">
+								<div class="productImage">
+									<img src="images/onion.png" alt="Yellow Corn">
+									<div class="productTag">
+										ORGANIC
+									</div>
+									<button class="wishlistBtn">
+									<i class="fa-regular fa-heart"></i>
+									</button>
+								</div>
+								<div class="productContent">
+									<div class="productLocation">
+										<i class="fa-solid fa-location-dot"></i>
+										Punjab
+									</div>
+									<h3>Red Onion</h3>
+									<div class="productPrice">
+										<span class="price">₹4,000</span>
+										<span class="unit">/ Qtl</span>
+									</div>
+									<p class="availability">
+										Avail: 1000 Quintals
+									</p>
+									<div class="sellerRow">
+										<div class="sellerInfo">
+											<div class="sellerAvatar">G</div>
+											<div class="sellerDetails">
+												<h4>GreenField Farms</h4>
+												<p>⭐ 4.8</p>
+											</div>
+										</div>
+										<i class="fa-regular fa-circle-check"></i>
+									</div>
+									<button class="contactBtn">
+									Contact Seller
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					</div>
+				</section>
+				<!-- End Marketplace Layout -->
+				
+				<!-- CTA Section -->
+				<div class="ctaSection">
+					<div class="ctaContent">
+						<h2>Start Selling Smarter Today</h2>
+						<p>
+							Join over 50,000 farmers and buyers transforming
+							the agricultural landscape of India.
+						</p>
+						<div class="ctaButtons">
+							<button class="farmerBtn">
+							Register as Farmer
+							</button>
+							<button class="buyerBtn">
+							Register as Buyer
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- footer section -->
+			<footer class="footer">
+				<div class="footerGrid">
+					<div class="footerCol">
+						<div class="footerLogo">
+							<img src="images/logo.png" alt="AgriConnect">
+						</div>
+						<p>
+							AgriConnect helps farmers connect directly with buyers,
+							access market insights and grow smarter.
+						</p>
+					</div>
+					<div class="footerCol">
+						<h3>Quick Links</h3>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="marketplace.html">Marketplace</a></li>
+							<li><a href="#">Market Rates</a></li>
+							<li><a href="weather.html">Weather</a></li>
+						</ul>
+					</div>
+					<div class="footerCol">
+						<h3>Services</h3>
+						<ul>
+							<li><a href="marketplace.html">Crop Marketplace</a></li>
+							<li><a href="weather.html">Weather Forecast</a></li>
+							<li><a href="#">Market Insights</a></li>
+							<li><a href="#">Fertilizer Advisor</a></li>
+						</ul>
+					</div>
+					<div class="footerCol">
+						<h3>Contact</h3>
+						<ul>
+							<li><i class="fa-solid fa-location-dot"></i> Amravati, Maharashtra</li>
+							<li><i class="fa-solid fa-phone"></i> +91 9876543210</li>
+							<li><i class="fa-solid fa-envelope"></i> support@agriconnect.com</li>
+						</ul>
+					</div>
+				</div>
+				<div class="footerBottom">
+					<p>© 2026 AgriConnect. All Rights Reserved.</p>
+				</div>
+			</footer>
+		</div>
+	</body>
 </html>
