@@ -225,6 +225,28 @@ body{
     font-size:3rem;
     color:var(--primary);
 }
+#location{
+    cursor:pointer;
+    transition:0.3s ease;
+}
+
+#location:hover{
+    color:var(--secondary);
+}
+
+#locationInput{
+    font-size:2rem;
+    font-weight:700;
+
+    border:none;
+    outline:none;
+
+    background:transparent;
+
+    color:var(--text-dark);
+
+    width:220px;
+}
 
 .weatherStats{
     display:grid;

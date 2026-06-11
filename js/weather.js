@@ -1,12 +1,19 @@
 const API_KEY = "d6607a2bdc45d0f149579922e28fa5ad";
-    let tempElement = document.getElementById("temperature");
-    let conditionElement = document.getElementById("condition");
-    let feelslikeElement = document.getElementById("feelsLike");
-    let humidityElement = document.getElementById("humidity");
-    let windSpeedElement = document.getElementById("windSpeed");
-    let locationElement = document.getElementById("location");
 
-    async function getWeather(city){
+const locationInput = document.getElementById("locationInput");
+const tempElement = document.getElementById("temperature");
+const conditionElement = document.getElementById("condition");
+const feelslikeElement = document.getElementById("feelsLike");
+const humidityElement = document.getElementById("humidity");
+const windSpeedElement = document.getElementById("windSpeed");
+const locationElement = document.getElementById("location");
+const cityNameElement = document.getElementById("cityName");
+const searchInput = document.getElementById("searchCity");
+const searchBtn = document.getElementById("searchBtn");
+
+async function getWeather(city) {
+
+    try {
 
         const response = await fetch(
             `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
@@ -14,24 +21,118 @@ const API_KEY = "d6607a2bdc45d0f149579922e28fa5ad";
 
         const data = await response.json();
 
-            document.getElementById("temperature").textContent =`${Math.round(data.main.temp)}°C`;
-            document.getElementById("condition").textContent =data.weather[0].main;
-            document.getElementById("feelsLike").textContent =`Feels Like: ${Math.round(data.main.feels_like)}°C`;
-            document.getElementById("humidity").textContent =`${data.main.humidity}%`;
-            document.getElementById("windSpeed").textContent =`${data.wind.speed} km/h`;
-            document.getElementById("cityName").textContent =`${city} `;
-            document.getElementById("location").textContent=`${city}`
+        if (data.cod !== 200) {
+            alert("City not found!");
+            return;
+        }
+
+        tempElement.textContent =
+            `${Math.round(data.main.temp)}°C`;
+
+        conditionElement.textContent =
+            data.weather[0].main;
+
+        feelslikeElement.textContent =
+            `Feels Like: ${Math.round(data.main.feels_like)}°C`;
+
+        humidityElement.textContent =
+            `${data.main.humidity}%`;
+
+        windSpeedElement.textContent =
+            `${data.wind.speed} km/h`;
+
+        locationElement.textContent =
+            data.name;
+
+        cityNameElement.textContent =
+            data.name;
 
     }
-    let searchbtn = document.getElementById("searchBtn")
-    searchbtn.addEventListener("click", () => {
+    catch (error) {
 
-        const city = document.getElementById("searchCity").value;
+        console.error(error);
 
+        alert(
+            "Unable to fetch weather data. Please try again."
+        );
+
+    }
+}
+
+/* Search Button */
+
+searchBtn.addEventListener("click", () => {
+
+    const city = searchInput.value.trim();
+
+    if (city === "") {
+        alert("Please enter a city name");
+        return;
+    }
+
+    getWeather(city);
+
+    searchInput.value = "";
+
+});
+
+/* Enter Key Support */
+
+
+locationInput.addEventListener("keydown", (event) => {
+
+    if(event.key === "Enter"){
+
+        const city =
+            locationInput.value.trim();
+
+        if(city !== ""){
+            getWeather(city);
+        }
+
+        locationInput.style.display = "none";
+
+        locationElement.style.display = "block";
+    }
+
+});
+
+// on clicking outside
+locationInput.addEventListener("blur", () => {
+
+    const city =
+        locationInput.value.trim();
+
+    if(city !== ""){
         getWeather(city);
-    });
-    window.addEventListener("DOMContentLoaded", () => {
-        getWeather("Amravati");
-    });
+    }
 
-    
+    locationInput.style.display = "none";
+
+    locationElement.style.display = "block";
+
+});
+
+
+
+//
+
+locationElement.addEventListener("click", () => {
+
+    locationInput.value = locationElement.textContent;
+
+    locationElement.style.display = "none";
+
+    locationInput.style.display = "block";
+
+    locationInput.focus();
+
+});
+
+/* Default Weather On Page Load */
+
+window.addEventListener("DOMContentLoaded", () => {
+
+    getWeather("Amravati");
+
+});
