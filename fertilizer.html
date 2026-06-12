@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+		<link rel="stylesheet" href="css/fertilizer.css">
+	</head>
+	<body>
+		<div class="parent">
+			<!-- Navigation bar -->
+			<div class="nav">
+				<div class="navleft">
+					<div class="logo">
+						<img src="images/logo.png" alt="logo">
+					</div>
+					<div class="navlinks">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="marketplace.html">Marketplace</a></li>
+							<li><a href="marketRates.html">Market Rates</a></li>
+							<li><a href="weather.html">Weather</a></li>
+							<li><a href="fertilizer.html">Fertiliser Advisor</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="navright">
+					<a href="#">Login</a>
+					<button>Sell Your Crops</button>
+				</div>
+			</div>
+			<!-- fertilizer Hero -->
+			<section class="marketHero">
+				<div class="heroContent">
+					<span class="heroTag">
+					Live Crop Analysis
+					</span>
+					<h1>
+						Analysis Your Crops at Real Time
+					</h1>
+					<p>
+						Analysis your crops at real time and get proper fertilizer recomendations any time.
+					</p>
+				</div>
+				<div class="marketStats">
+					<div class="statItem">
+						<h2>2500+</h2>
+						<p>Markets Covered</p>
+					</div>
+					<div class="statItem">
+						<h2>120+</h2>
+						<p>Commodities</p>
+					</div>
+					<div class="statItem">
+						<h2>28</h2>
+						<p>States Covered</p>
+					</div>
+					<div class="statItem">
+						<h2>Daily</h2>
+						<p>Price Updates</p>
+					</div>
+				</div>
+			</section>
+			<!-- upload image section -->
+			<div class="uploadsection">
+				<div class="upload-box" id="dropZone">
+					<p>Drag & Drop Image Here</p>
+					<input
+						type="file"
+						id="fileInput"
+						accept="image/*"
+						hidden
+						>
+				</div>
+				<button id="browseBtn">
+				Browse Files
+				</button>
+				<img
+					id="preview"
+					src=""
+					alt="Preview Image"
+					>
+			
+			<!-- result section -->
+			<section class="resultSection" id="resultSection">
+				<div class="resultLeft">
+					<span class="resultTag">
+					CROP ANALYSIS
+					</span>
+					<h2 id="diseaseName">
+						Upload an image to analyze
+					</h2>
+					<p id="diseaseDescription">
+						Our system will identify the crop condition and recommend suitable fertilizers.
+					</p>
+				</div>
+				<div class="resultRight">
+					<h3>Recommended Fertilizers</h3>
+					<ul id="fertilizerList">
+						<li>No recommendations available yet</li>
+					</ul>
+				</div>
+			</section>
+            </div>
+			<!-- footer section -->
+			<footer class="footer">
+				<div class="footerGrid">
+					<div class="footerCol">
+						<div class="footerLogo">
+							<img src="images/logo.png" alt="AgriConnect">
+						</div>
+						<p>
+							AgriConnect helps farmers connect directly with buyers,
+							access market insights and grow smarter.
+						</p>
+					</div>
+					<div class="footerCol">
+						<h3>Quick Links</h3>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="marketplace.html">Marketplace</a></li>
+							<li><a href="marketRates.html">Market Rates</a></li>
+							<li><a href="weather.html">Weather</a></li>
+						</ul>
+					</div>
+					<div class="footerCol">
+						<h3>Services</h3>
+						<ul>
+							<li><a href="marketplace.html">Crop Marketplace</a></li>
+							<li><a href="weather.html">Weather Forecast</a></li>
+							<li><a href="marketRates.html">Market Insights</a></li>
+							<li><a href="fertilizer.html">Fertilizer Advisor</a></li>
+						</ul>
+					</div>
+					<div class="footerCol">
+						<h3>Contact</h3>
+						<ul>
+							<li><i class="fa-solid fa-location-dot"></i> Amravati, Maharashtra</li>
+							<li><i class="fa-solid fa-phone"></i> +91 9876543210</li>
+							<li><i class="fa-solid fa-envelope"></i> support@agriconnect.com</li>
+						</ul>
+					</div>
+				</div>
+				<div class="footerBottom">
+					<p>© 2026 AgriConnect. All Rights Reserved.</p>
+				</div>
+			</footer>
+		</div>
+		<script src="js/fertilizer.js"></script>
+	</body>
+</html>
