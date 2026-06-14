@@ -1,12 +1,14 @@
 const API_KEY = "579b464db66ec23bdd0000018884ebea4db54f5e63ba95d0357d1920";
 
-const url =`https://api.data.gov.in/resource/35985678-0d79-46b4-9ed6-6f13308a1d24?api-key=${API_KEY}&format=json&limit=100`;
+const url =`https://api.data.gov.in/resource/35985678-0d79-46b4-9ed6-6f13308a1d24?api-key=${API_KEY}&format=json&limit=10`;
 
 getMarketData();    
 async function getMarketData(){
     try{
         const response = await fetch(url);
+        console.log(response);
         const data = await response.json();
+        console.log(data);
         const records = data.records;
 
         if(records.length === 0){
