@@ -8,7 +8,7 @@ const dropZone = document.getElementById("dropZone");
 const diseaseName = document.getElementById("diseaseName");
 
 const diseaseDescription = document.getElementById("diseaseDescription");
-
+const uploadbox = document.getElementById("dropZone");
 const fertilizerList = document.getElementById("fertilizerList");
 
 
@@ -105,6 +105,8 @@ const cropDatabase = {
 
 browseBtn.addEventListener("click", () => {
     fileInput.click();
+    uploadbox.style.display="none";
+
 });
 
 
@@ -113,10 +115,13 @@ browseBtn.addEventListener("click", () => {
 fileInput.addEventListener("change", () => {
     const file = fileInput.files[0];
     if (!file) return;
+
     preview.style.display = "block";
     preview.src = URL.createObjectURL(file);
-    simulateAnalysis(file);
 
+    dropZone.style.display = "none"; // hide after image chosen
+
+    simulateAnalysis(file);
 });
 
 
@@ -125,23 +130,29 @@ fileInput.addEventListener("change", () => {
 dropZone.addEventListener("dragover", (event) => {
     event.preventDefault();
     dropZone.style.borderColor = "#2D6A4F";
+        // uploadbox.style.display="none";
+
 
 });
 
 dropZone.addEventListener("dragleave", () => {
     dropZone.style.borderColor = "";
+    uploadbox.style.display="none";
 });
 
 dropZone.addEventListener("drop", (event) => {
     event.preventDefault();
-    dropZone.style.borderColor = "";
+
     const file = event.dataTransfer.files[0];
     if (!file) return;
+
     preview.style.display = "block";
     preview.src = URL.createObjectURL(file);
+
+    dropZone.style.display = "none";
+
     simulateAnalysis(file);
 });
-
 
 // DISEASE ANALYSIS
 
